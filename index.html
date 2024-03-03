@@ -4,29 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NeuroIkigai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Applying the font family globally */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Custom color scheme */
+    :root {
+      --purple: #574C80; /* New purple color */
+      --purple-hover: #463970; /* Slightly darker purple for hover state */
+      --black-700: #3D4043;
+      --background-light-purple: #DDBBE6;
+      --gray-custom: #79807F;
+    }
+
+    /* Applying custom colors */
+    .bg-purple, .text-purple, .border-purple {
+      background-color: var(--purple);
+      color: var(--purple);
+      border-color: var(--purple);
+    }
+
+    .hover\:bg-purple:hover, .hover\:text-purple:hover, .hover\:border-purple:hover {
+      background-color: var(--purple-hover);
+      color: var(--purple-hover);
+      border-color: var(--purple-hover);
+    }
+
+    .bg-background-light-purple {
+      background-color: var(--background-light-purple);
+    }
+
+    .text-black-700 {
+      color: var(--black-700);
+    }
+
+    .text-black-800 {
+      color: var(--black-800);
+    }
+
+    .text-gray-custom {
+      color: var(--gray-custom);
+    }
+
+    /* Update specific classes */
+    .bg-signup-button {
+      background-color: var(--purple);
+    }
+
+    .bg-signup-button:hover {
+      background-color: var(--purple-hover);
+    }
+
+    /* Update elements with the new purple color */
+    nav, .w-16.h-2, button, .bg-gray-100, .text-purple, .border-purple {
+      background-color: var(--purple);
+      color: var(--purple);
+      border-color: var(--purple);
+    }
+
+    /* Update hover state for elements */
+    a:hover, a:focus, button:hover, button:focus {
+      background-color: var(--purple-hover);
+      color: var(--purple-hover);
+    }
+
+    footer {
+      background-color: var(--gray-custom);
+    }
+  </style>
 </head>
 <body class="bg-gray-100">
 
   <nav class="bg-white px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-      <div class="flex items-center space-x-4"> <!-- Adjusted for space between logo and About Us -->
+      <div class="flex items-center space-x-4">
         <a href="https://neuroikigai.com" class="flex items-center">
           <img src="logo.png" class="h-6 sm:h-9" alt="NeuroIkigai Logo">
         </a>
-        <a href="#" class="text-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">About us</a> <!-- Removed padding and rounded from About us -->
+        <a href="#" class="text-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">About us</a>
       </div>
-      <div class="flex items-center space-x-4 md:order-2"> <!-- Adjusted for space between Log In and Sign Up -->
-        <a href="#" class="text-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">Log in</a> <!-- Changed button to link for Log in -->
-        <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-900">Sign up</button>
+      <div class="flex items-center space-x-4 md:order-2">
+        <!-- Login Button -->
+        <button id="loginButton" class="bg-white-600 hover:bg-purple-600 text-purple-600 font-bold py-2 px-4 ">
+          Log in
+        </button>
+        <div class="w-4"></div> <!-- Space between buttons -->
+        <!-- Signup Button -->
+        <button id="signupButton" class="bg-purple-600 hover:bg-purple-600 text-white font-bold py-2 px-4 ">
+          Sign Up
+        </button>
       </div>
-      <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-auto" aria-controls="mobile-menu-2" aria-expanded="false">
+      <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-auto" aria-controls="mobile-menu-2" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path></svg>
       </button>
     </div>
   </nav>
-  
+
 <section class="bg-gray-100">
     <div class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div>
@@ -40,7 +120,7 @@
           </p>
         </div>
         <div class="mt-4">
-          <a href="#" class="inline-block px-5 py-3 border border-transparent text-sm font-medium  text-white bg-purple-600 hover:bg-purple-700 mr-2">
+          <a href="#" class="inline-block px-5 py-3 border border-transparent text-sm font-medium  text-white bg-purple-600 hover:bg-purple-600 mr-2">
             Access AI companion
           </a>
           <a href="#" class="inline-block px-5 py-3 border border-transparent text-sm font-medium  text-purple-600 bg-white hover:bg-gray-100">
@@ -62,28 +142,26 @@
           <div class="rounded overflow-hidden shadow-lg">
     
             <div class=" h-64 w-full flex items-center justify-center"> <!-- Placeholder for image -->
-              <img src="imagedoc.png" style="height:329px; width:374px;" />
+              <img src="imagedoc.png" style="height: 374px; width:329px;" />
+
             </div>
           </div>
         </div>
   
         <!-- Heading and bullet points on the right -->
         <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
-          <h3 class="text-2xl font-bold text-gray-800">Our Innovative Solution</h3>
-          <!-- Subheading for bullet points -->
-          <h4 class="text-xl text-purple-600 mt-2 mb-4">Key Features:</h4>
+          <h3 class="text-2xl font-bold text-gray-800">Al-Powered Personalization</h3>
+          
           <ul class="list-disc list-inside space-y-2">
-            <li>First amazing feature that differentiates us.</li>
-            <li>Second powerful feature with benefits.</li>
-            <li>Third unique selling point for our product.</li>
+            <li><strong>Intuitive Conversations:</strong> Our Al companion fosters natural, engaging conversations, offering companionship and comfort, even in advanced stages of dementia.</li>
+            <li><strong>Adaptive Learning:</strong> Our companion learns from user interactions, tailoring activities and content to suit individual cognitive levels and interests</li>
+            <li><strong>Behavioural Insights:</strong> By analyzing user interaction and engagement, our companion offers valuable insights to caregivers and family members.</li>
           </ul>
           <!-- Description -->
-          <p class="text-gray-600 mt-4">
-            Learn more about how our product stands out in the market. We provide detailed insights and additional benefits.
-          </p>
+         
           <!-- Learn More button -->
           <div class="mt-6">
-            <a href="#" class="inline-block px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700">
+            <a href="#" class="inline-block px-6 py-3 text-base font-medium rounded-md text-purple-600 bg-white hover:bg-purple-600 hover:text-purple-600">
               Learn More
             </a>
           </div>
@@ -166,7 +244,7 @@
           </div>
           <h3 class="text-lg font-semibold mb-2">Music</h3>
           <p class="text-gray-600 text-center mb-4">AI learns and plays your favorite songs.</p>
-          <div class="w-full bg-purple-700 h-1"></div>
+          <div class="w-full bg-purple-600 h-1"></div>
         </div>
   
         <!-- Activity Card: Stories -->
@@ -176,7 +254,7 @@
           </div>
           <h3 class="text-lg font-semibold mb-2">Stories</h3>
           <p class="text-gray-600 text-center mb-4">AI learns about your favorite stories.</p>
-          <div class="w-full bg-purple-700 h-1"></div>
+          <div class="w-full bg-purple-600 h-1"></div>
         </div>
   
         <!-- Activity Card: Favourite Memories -->
@@ -186,7 +264,7 @@
           </div>
           <h3 class="text-lg font-semibold mb-2">Favourite Memories</h3>
           <p class="text-gray-600 text-center mb-4">Relive your favourite memories.</p>
-          <div class="w-full bg-purple-700 h-1"></div>
+          <div class="w-full bg-purple-600 h-1"></div>
         </div>
   
         <!-- Activity Card: Nutritious Food -->
@@ -196,7 +274,7 @@
           </div>
           <h3 class="text-lg font-semibold mb-2">Nutritious Food</h3>
           <p class="text-gray-600 text-center mb-4">Healthy, quick-prep recipes.</p>
-          <div class="w-full bg-purple-700 h-1"></div>
+          <div class="w-full bg-purple-600 h-1"></div>
         </div>
       </div>
     </div>
@@ -214,8 +292,10 @@
   
       <form class="mt-8">
         <div class="flex justify-center items-center">
-          <input type="email" id="email-address" name="email" placeholder="Your email address" class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-l-lg focus:ring-blue-500 focus:border-blue-500" required>
-          <button type="submit" class="px-6 py-2 border border-transparent text-base font-medium rounded-r-lg text-white bg-purple-600 hover:bg-purple-700">Subscribe</button>
+          <input type="email" id="email-address" name="email" placeholder="Your email address" class="w-full md:w-auto px-4 py-2 border border-gray-300  focus:ring-blue-500 focus:border-blue-500" required>
+          <button type="submit" class="px-5 py-3 border border-transparent text-sm font-medium  text-white bg-purple-600 hover:bg-purple-600">
+            Subscribe
+          </button>
         </div>
       </form>
     </div>
@@ -298,6 +378,37 @@
   btn.addEventListener('click', () => {
     menu.classList.toggle('hidden');
     menu.classList.toggle('flex');
+     // Function to show the sign up popup
+  function showSignupPopup() {
+    document.getElementById("signupPopup").classList.remove("hidden");
+  }
+
+  // Function to hide the sign up popup
+  function hideSignupPopup() {
+    document.getElementById("signupPopup").classList.add("hidden");
+  }
+
+  // Function to show the login popup
+  function showLoginPopup() {
+    document.getElementById("loginPopup").classList.remove("hidden");
+  }
+
+  // Function to hide the login popup
+  function hideLoginPopup() {
+    document.getElementById("loginPopup").classList.add("hidden");
+  }
+
+  // Event listener for the Sign Up button
+  document.getElementById("signupButton").addEventListener("click", showSignupPopup);
+
+  // Event listener for the Close button in the sign up popup
+  document.getElementById("signupCloseButton").addEventListener("click", hideSignupPopup);
+
+  // Event listener for the Log In button
+  document.getElementById("loginButton").addEventListener("click", showLoginPopup);
+
+  // Event listener for the Close button in the login popup
+  document.getElementById("loginCloseButton").addEventListener("click", hideLoginPopup);
   });
 </script>
 
