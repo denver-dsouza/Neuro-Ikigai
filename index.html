@@ -8,34 +8,25 @@
 </head>
 <body class="bg-gray-100">
 
-<nav class="bg-white px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="https://neuroikigai.com" class="flex items-center">
-        <!-- Include your logo here -->
-        <img src="/Neuro-Ikigai/logo.png" class="mr-3 h-6 sm:h-9" alt="NeuroIkigai Logo">
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">NeuroIkigai</span>
-    </a>
-    <div class="flex md:order-2">
-        <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-900">Sign up</button>
-        <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+  <nav class="bg-white px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+      <div class="flex items-center space-x-4"> <!-- Adjusted for space between logo and About Us -->
+        <a href="https://neuroikigai.com" class="flex items-center">
+          <img src="logo.png" class="h-6 sm:h-9" alt="NeuroIkigai Logo">
+        </a>
+        <a href="#" class="text-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">About us</a> <!-- Removed padding and rounded from About us -->
+      </div>
+      <div class="flex items-center space-x-4 md:order-2"> <!-- Adjusted for space between Log In and Sign Up -->
+        <a href="#" class="text-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors">Log in</a> <!-- Changed button to link for Log in -->
+        <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-900">Sign up</button>
+      </div>
+      <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-auto" aria-controls="mobile-menu-2" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path></svg>
+      </button>
     </div>
-    <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-      <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-        <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white" aria-current="page">About us</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-gray-700 rounded md:bg-transparent md:p-0 dark:text-white">Log in</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+  
 <section class="bg-gray-100">
     <div class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       <div>
@@ -69,8 +60,9 @@
         <!-- Image placeholder on the left -->
         <div class="md:w-1/2">
           <div class="rounded overflow-hidden shadow-lg">
-            <div class="bg-gray-300 h-64 w-full flex items-center justify-center"> <!-- Placeholder for image -->
-              <span class="text-gray-500">Image placeholder</span>
+    
+            <div class=" h-64 w-full flex items-center justify-center"> <!-- Placeholder for image -->
+              <img src="imagedoc.png" style="height:329px; width:374px;" />
             </div>
           </div>
         </div>
@@ -134,7 +126,7 @@
         <!-- Testimonial 2 -->
         <div class="w-full md:w-1/2 lg:w-1/3 px-4">
           <div class="space-y-4 bg-white p-6 rounded-lg shadow">
-            <img class="w-24 h-24 rounded-full mx-auto" src="path-to-image-2.jpg" alt="Testimonial 2">
+            <img class="w-24 h-24 rounded-full mx-auto" src="test 2.png" alt="Testimonial 2">
             <div class="text-center">
               <p class="text-gray-600 text-sm">
                 "NeuroIkigai has been a game-changer for our family. My mother was diagnosed with dementia last year; she's more engaged."
@@ -166,24 +158,49 @@
         </p>
       </div>
   
-      <!-- Activities Grid -->
       <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Floating Activity Card 1 -->
-        <div class="transform hover:shadow-xl transition-shadow duration-300">
-          <div class="flex flex-col items-start bg-white p-6 rounded-lg shadow-md">
-            <div class="bg-gray-200 p-4 rounded-full">
-              <!-- Replace with actual icon -->
-              <span class="text-3xl text-purple-700">&#9658;</span>
-            </div>
-            <h3 class="mt-4 font-semibold">Music</h3>
-            <div class="h-1 w-10 bg-purple-700 mt-2"></div>
-            <p class="mt-2 text-gray-600">AI learns and plays your favorite songs.</p>
+        <!-- Activity Card: Music -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-md h-full justify-between">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="music.png" alt="Music" class="h-12 w-12" />
           </div>
+          <h3 class="text-lg font-semibold mb-2">Music</h3>
+          <p class="text-gray-600 text-center mb-4">AI learns and plays your favorite songs.</p>
+          <div class="w-full bg-purple-700 h-1"></div>
         </div>
   
-        <!-- Repeat for other activity cards... -->
+        <!-- Activity Card: Stories -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-md h-full justify-between">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="books.png" alt="Stories" class="h-12 w-12" />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Stories</h3>
+          <p class="text-gray-600 text-center mb-4">AI learns about your favorite stories.</p>
+          <div class="w-full bg-purple-700 h-1"></div>
+        </div>
+  
+        <!-- Activity Card: Favourite Memories -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-md h-full justify-between">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="memories.png" alt="Favourite Memories" class="h-12 w-12" />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Favourite Memories</h3>
+          <p class="text-gray-600 text-center mb-4">Relive your favourite memories.</p>
+          <div class="w-full bg-purple-700 h-1"></div>
+        </div>
+  
+        <!-- Activity Card: Nutritious Food -->
+        <div class="flex flex-col items-center bg-white p-6 rounded-lg shadow-md h-full justify-between">
+          <div class="bg-gray-200 p-4 rounded-full mb-4">
+            <img src="food.png" alt="Nutritious Food" class="h-12 w-12" />
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Nutritious Food</h3>
+          <p class="text-gray-600 text-center mb-4">Healthy, quick-prep recipes.</p>
+          <div class="w-full bg-purple-700 h-1"></div>
+        </div>
       </div>
     </div>
+
   </section>
   
   <section class="bg-gray-100 py-12">
